@@ -1,16 +1,19 @@
-    <script>
-        const correctAnswer = "секрет";
-
-        function checkAnswer() {
-            const userAnswer = document.getElementById("answerInput").value;
-            const message = document.getElementById("message");
-
-            if (userAnswer.toLowerCase() === correctAnswer) {
-                message.textContent = "Правильно!";
-                message.style.color = "green";
-            } else {
-                message.textContent = "Неправильно, ищи ответ";
-                message.style.color = "red";
-            }
-        }
-    </script>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Квест</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Введите правильный ответ</h1>
+        <input type="text" id="answerInput" placeholder="Ваш ответ">
+        <button onclick="checkAnswer()">Проверить</button>
+        <p id="message"></p>
+    </div>
+    <!-- Answer=секрет -->
+    <script src="script.js"></script>
+</body>
+</html>
